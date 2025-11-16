@@ -1,19 +1,22 @@
 import React, { useRef, useEffect, useState } from 'react';
+import ghaziDev from '../imgs/ghaziDev.jpg';
+import id from '../imgs/id.jpg';
+import design1 from  '../imgs/design.jpg';
 
 const visionData = [
    {
-        image: '../imgs/ghaziDev.jpg',
+        image: ghaziDev,
         title: 'Identity',
         description: 'Developer: Ghazi'
     },
     {
-        image: '../imgs/design.jpg',
+        image: design1,
         title: 'Core Process',
         description: 'Analysis, Planning, Design'
     },
    
     {
-        image: '../imgs/id.jpg',
+        image: id,
         title: 'Driving Force',
         description: 'Passion, creativity, achievement'
     }
