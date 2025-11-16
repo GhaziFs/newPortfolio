@@ -61,7 +61,7 @@ const projectsData: Project[] = [
   {
     image: alkashaf ,
     title: 'Alkashaf',
-    description: "An intelligent lexicon blog website that reveals word meanings across over 35,000 entries, compiled from major Arabic dictionaries.",
+    description: "An intelligent lexicon blog website that reveals word meanings across over 35000 entries, compiled from major Arabic dictionaries.",
     tags: [],
     liveUrl: 'https://blogs.alkashaf.com/',
     repoUrl: '#',
