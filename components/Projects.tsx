@@ -202,36 +202,30 @@ const ProjectCard: React.FC<{ project: Project; isVisible: boolean; index: numbe
 
 const Projects: React.FC = () => {
     const sectionRef = useRef<HTMLDivElement>(null);
-const [isVisible, setIsVisible] = useState(false);
+    const [isVisible, setIsVisible] = useState(true);
   
-   useEffect(() => {
-  // لو المتصفح ما يدعم IntersectionObserver (بعض متصفحات الجوال أو in-app)
-  if (typeof window !== 'undefined' && !('IntersectionObserver' in window)) {
-    setIsVisible(true);
-    return;
-  }
-
-  const section = sectionRef.current;
-  if (!section) return;
-
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      if (entry.isIntersecting) {
-        setIsVisible(true);
-        observer.unobserve(entry.target);
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer.unobserve(entry.target);
+          }
+        },
+        { threshold: 0.2 }
+      );
+  
+      if (sectionRef.current) {
+        observer.observe(sectionRef.current);
       }
-    },
-    { threshold: 0.2 }
-  );
-
-  observer.observe(section);
-
-  return () => {
-    if (section) {
-      observer.unobserve(section);
-    }
-  };
-}, []);
+  
+      return () => {
+        if (sectionRef.current) {
+          // eslint-disable-next-line react-hooks/exhaustive-deps
+          observer.unobserve(sectionRef.current);
+        }
+      };
+    }, []);
 
   return (
     <section 
