@@ -71,7 +71,7 @@ const projectsData: Project[] = [
     title: 'KnowledgeX',
     description: 'A bilingual (Arabic/English) client website explaining the company\'s identity, offerings, and programs.',
     tags: [],
-    liveUrl: '#https://github.com/Ghazi18',
+    liveUrl: 'https://knowlegextest.vercel.app/',
     repoUrl: '#',
   },
   {
