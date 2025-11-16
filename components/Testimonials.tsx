@@ -6,13 +6,13 @@ const testimonialsData: Testimonial[] = [
     quote: "I recently had the pleasure of working with Ghazi to design and program our website, and we couldn't be more impressed with the results. His attention to detail, creativity, and technical expertise reflect through every step of the process. In addition to offer valuable insights and suggestions to our website.",
     name: 'Ayman Alsharif',
     title: 'Jathwah CEO',
-    avatar: 'https://i.pravatar.cc/150?img=1',
+    avatar: '../imgs/AyamanAvatar.e721099550b5f9e0e6f4.png',
   },
   {
     quote: "I would like to highly recommend Ghazi as an outstanding front-end developer. I had the pleasure of working with him on a project, and he demonstrated exceptional skills in designing and developing user interfaces. Ghazi has a deep understanding of user experience design principles and has the ability to transform complex ideas into smooth, user-friendly interfaces. His attention to detail and ability to work under pressure made him a valuable asset to our team.",
     name: 'Salwa Ibrahim',
     title: 'KnowledgeX team',
-    avatar: 'https://i.pravatar.cc/150?img=2',
+    avatar: '../imgs/logoPrev.7f160c313d700b48045c.jpg',
   },
 ];
 

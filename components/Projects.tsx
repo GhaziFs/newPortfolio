@@ -1,5 +1,17 @@
 import React, { useRef, useEffect, useState } from 'react';
 import type { Project } from '../types';
+import qoute from '../imgs/qoute.png';
+import knowledgeX from '../imgs/kx.png';
+import jathwah from '../imgs/Jathwah.2a2058d77e1d329762a6.png'; 
+import kerneltcs from '../imgs/ker.png'; 
+import daralrahmah from '../imgs/daralrahmah.svg';
+import alkashaf from '../imgs/alkashaf.png';
+import discoverMakkah from '../imgs/discoverMakkah.png';
+import story from '../imgs/story.png';
+import todo from '../imgs/todo.png';
+import report from '../imgs/report.png';
+import wadiMakkah from '../imgs/wadiMakkah.png';
+
 
 // Icons for Projects
 const EcommerceIcon = () => (
@@ -12,11 +24,7 @@ const DashboardIcon = () => (
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
     </svg>
 );
-const ProjectToolIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-    </svg>
-);
+
 const AIIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 text-pink-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -27,125 +35,107 @@ const AIIcon = () => (
 
 const projectsData: Project[] = [
   {
-    image: <ProjectToolIcon />,
+    image: discoverMakkah ,
     title: 'Discover Makkah',
     description: 'A graduation project website to guide visitors in Makkah, with instructions, services, APIs for weather, time, currency, and a helpful chatbot.',
-    tags: ['React', 'APIs', 'Chatbot', 'Graduation Project'],
-    liveUrl: '#',
+    tags: [],
+    liveUrl: 'https://drive.google.com/drive/folders/1xyuEE6HOsnqzjFXB77P6gjvvcFxkHGdx',
     repoUrl: '#',
   },
   {
-    image: <ProjectToolIcon />,
+    image: jathwah ,
     title: 'Jathwah',
     description: 'A client website for the Jathwah team, detailing their mission, services, portfolio, and contact information.',
-    tags: ['Client Project', 'HTML', 'CSS', 'JavaScript'],
-    liveUrl: '#',
+    tags: [],
+    liveUrl: 'https://www.jathwah.sa/',
     repoUrl: '#',
   },
   {
-    image: <ProjectToolIcon />,
+    image: daralrahmah ,
     title: 'Dar Alrahamah',
     description: 'A uniquely designed client website for Dar Al-Rahma Real Estate, showcasing their offerings, projects, stats, and services.',
-    tags: ['Real Estate', 'Client Project', 'UI/UX'],
-    liveUrl: '#',
+    tags: [],
+    liveUrl: 'https://drconsultancy.sa/',
     repoUrl: '#',
   },
   {
-    image: <ProjectToolIcon />,
+    image: alkashaf ,
     title: 'Alkashaf',
     description: "An intelligent lexicon blog website that reveals word meanings across over 35,000 entries, compiled from major Arabic dictionaries.",
-    tags: ['Blog', 'Lexicon', 'Content'],
-    liveUrl: '#',
+    tags: [],
+    liveUrl: 'https://blogs.alkashaf.com/',
     repoUrl: '#',
   },
   {
-    image: <AIIcon />,
-    title: 'Get your quote',
-    description: 'A personal project that generates random quotes from influential people, with an option to share on social media.',
-    tags: ['Personal Project', 'API', 'JavaScript'],
-    liveUrl: '#',
-    repoUrl: '#',
-  },
-  {
-    image: <ProjectToolIcon />,
+    image: knowledgeX ,
     title: 'KnowledgeX',
     description: 'A bilingual (Arabic/English) client website explaining the company\'s identity, offerings, and programs.',
-    tags: ['Client Project', 'React', 'i18n'],
-    liveUrl: '#',
+    tags: [],
+    liveUrl: '#https://github.com/Ghazi18',
     repoUrl: '#',
   },
   {
-    image: <ProjectToolIcon />,
-    title: 'Share your story',
-    description: 'A platform for users to publish their creative stories with a title and name. A like system highlights the most popular entries.',
-    tags: ['Personal Project', 'Firebase', 'React'],
-    liveUrl: '#',
+    image: qoute ,
+    title: 'Get your quote',
+    description: 'A personal project that generates random quotes from influential people, with an option to share on social media.',
+    tags: [],
+    liveUrl: 'https://get-quote-test.netlify.app/',
     repoUrl: '#',
   },
+  
+  
   {
-    image: <ProjectToolIcon />,
+    image: kerneltcs ,
     title: 'Osul website',
     description: 'A real estate project in Saudi Arabia developed with the Kerneltics team, where I served as project manager and front-end developer.',
-    tags: ['Team Project', 'Real Estate', 'React'],
-    liveUrl: '#',
+    tags: [],
+    liveUrl: 'https://osol.kerneltics.com/',
     repoUrl: '#',
   },
   {
-    image: <ProjectToolIcon />,
+    image: kerneltcs ,
     title: 'Photographer portfolio',
     description: 'A professional portfolio website for a photographer, developed with the Kerneltics team where I acted as PM and front-end developer.',
-    tags: ['Team Project', 'Portfolio', 'React'],
-    liveUrl: '#',
+    tags: [],
+    liveUrl: 'https://photographer.kerneltics.com/',
     repoUrl: '#',
   },
   {
-    image: <DashboardIcon />,
+    image: report ,
     title: 'Page for displaying reports',
     description: 'A contribution to the Nusuk Cards project for the Hajj season, creating a clear, attractive, and fast report visualization page.',
-    tags: ['Dashboard', 'Data Viz', 'Internal Tool'],
-    liveUrl: '#',
+    tags: [],
+    liveUrl: 'https://reports1.vercel.app/',
     repoUrl: '#',
   },
   {
-    image: <ProjectToolIcon />,
+    image: todo ,
     title: 'To do list',
     description: 'A personal task management project (To-Do-List) with add, edit, delete functionality, separating tasks into completed and unfinished.',
-    tags: ['Personal Project', 'Utility', 'JavaScript'],
-    liveUrl: '#',
+    tags: [],
+    liveUrl: 'https://ghazi-todo-app-tset.netlify.app/',
     repoUrl: '#',
   },
+ 
+ 
   {
-    image: <ProjectToolIcon />,
-    title: 'Makkah Weather',
-    description: 'A personal project using an API to display the weather for my city, Makkah, with time and bilingual translation.',
-    tags: ['Personal Project', 'API', 'Utility'],
-    liveUrl: '#',
-    repoUrl: '#',
-  },
-  {
-    image: <AIIcon />,
-    title: 'Initial diagnosis',
-    description: 'A personal project for preliminary patient diagnosis using AI, providing results based on user-inputted symptoms.',
-    tags: ['Personal Project', 'AI', 'Health'],
-    liveUrl: '#',
-    repoUrl: '#',
-  },
-  {
-    image: <ProjectToolIcon />,
+    image: wadiMakkah ,
     title: 'Wadi Makkah page',
     description: 'A training project to design and create the Wadi Makkah company website pages with new ideas and a suitable design.',
-    tags: ['Training', 'Website', 'HTML', 'CSS'],
-    liveUrl: '#',
+    tags: [],
+    liveUrl: 'https://summertrainner.wmitproj.com/#',
     repoUrl: '#',
   },
+
   {
-    image: <DashboardIcon />,
-    title: 'Wadi Makkah dashboard',
-    description: 'A training project to design and create an admin dashboard to control the content of the Wadi Makkah website.',
-    tags: ['Training', 'Dashboard', 'JavaScript'],
-    liveUrl: '#',
+    image: story ,
+    title: 'Share your story',
+    description: 'A platform for users to publish their creative stories with a title and name. A like system highlights the most popular entries.',
+    tags: [],
+    liveUrl: '#https://github.com/Ghazi18',
     repoUrl: '#',
   },
+ 
 ];
 
 const ExternalLinkIcon = () => (
@@ -162,35 +152,52 @@ const GithubIcon = () => (
 
 
 const ProjectCard: React.FC<{ project: Project; isVisible: boolean; index: number }> = ({ project, isVisible, index }) => (
-    <div 
-      className={`bg-gray-800/50 rounded-lg overflow-hidden border border-gray-700 group transition-all duration-500 hover:border-teal-500/50 hover:shadow-2xl hover:shadow-teal-500/10 hover:-translate-y-2 flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
-      style={{ transitionDelay: `${index * 150}ms` }}
-    >
-        <div className="h-48 bg-gray-800 flex items-center justify-center p-8 overflow-hidden relative">
-            <div className="absolute inset-0 bg-grid-gray-700/20 [mask-image:radial-gradient(ellipse_at_center,white_20%,transparent_80%)]"></div>
-            <div className="transform transition-transform duration-500 group-hover:scale-110 z-10">
-                {project.image}
-            </div>
-        </div>
-        <div className="p-6 flex flex-col flex-grow">
-            <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
-            <p className="text-gray-400 mb-4 text-sm flex-grow">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mb-4">
-                {project.tags.map(tag => (
-                    <span key={tag} className="bg-teal-500/10 text-teal-300 text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
-                ))}
-            </div>
-            <div className="flex items-center space-x-4 mt-auto">
-                {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-gray-300 hover:text-teal-400 transition-colors">
-                    <ExternalLinkIcon /> <span>Visit Project</span>
-                </a>}
-                {project.repoUrl && <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-gray-300 hover:text-teal-400 transition-colors">
-                    <GithubIcon /> <span>GitHub</span>
-                </a>}
-            </div>
-        </div>
+  <div 
+    className={`bg-gray-800/50 rounded-lg overflow-hidden border border-gray-700 group transition-all duration-500 hover:border-teal-500/50 hover:shadow-2xl hover:shadow-teal-500/10 hover:-translate-y-2 flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+    style={{ transitionDelay: `${index * 150}ms` }}
+  >
+    <div className="h-48 bg-gray-800 flex items-center justify-center overflow-hidden relative">
+      <div className="absolute inset-0 bg-grid-gray-700/20 [mask-image:radial-gradient(ellipse_at_center,white_20%,transparent_80%)]"></div>
+      
+      <div className="relative z-10 w-full h-full flex items-center justify-center">
+        {typeof project.image === 'string' ? (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-contain transform transition-transform duration-500 group-hover:scale-110"
+          />
+        ) : (
+          <div className="transform transition-transform duration-500 group-hover:scale-110">
+            {project.image}
+          </div>
+        )}
+      </div>
     </div>
+
+    <div className="p-6 flex flex-col flex-grow">
+      <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
+      <p className="text-gray-400 mb-4 text-sm flex-grow">{project.description}</p>
+      <div className="flex flex-wrap gap-2 mb-4">
+        {project.tags.map(tag => (
+          <span key={tag} className="bg-teal-500/10 text-teal-300 text-xs font-semibold px-2.5 py-1 rounded-full">{tag}</span>
+        ))}
+      </div>
+      <div className="flex items-center space-x-4 mt-auto">
+        {project.liveUrl && (
+          <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-gray-300 hover:text-teal-400 transition-colors">
+            <ExternalLinkIcon /> <span>Visit Project</span>
+          </a>
+        )}
+        {project.repoUrl && (
+          <a href={project.repoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-gray-300 hover:text-teal-400 transition-colors">
+            <GithubIcon /> <span>GitHub</span>
+          </a>
+        )}
+      </div>
+    </div>
+  </div>
 );
+
 
 
 const Projects: React.FC = () => {

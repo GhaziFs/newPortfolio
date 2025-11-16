@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
+import logo from '../imgs/gsLogo.png';
 
 const navLinks = [
   { href: '#about', label: 'About' },
   { href: '#vision', label: 'Vision' },
   { href: '#services', label: 'Services' },
-  { href: '#skills', label: 'Skills' },
   { href: '#projects', label: 'Projects' },
   { href: '#testimonials', label: 'Clients' },
   { href: '#contact', label: 'Contact' },
@@ -33,9 +33,20 @@ const Header: React.FC = () => {
     <header className="sticky top-0 z-50 bg-gray-900/70 backdrop-blur-lg">
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
-            Ghazi
-          </a>
+         <a
+  href="#"
+  onClick={(e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }}
+  className="flex items-center"
+>
+  <img
+    src={logo}
+    alt="Logo"
+    className="h-10 w-auto object-contain"
+  />
+</a>
           
           <div className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (

@@ -1,18 +1,19 @@
 import React, { useRef, useEffect, useState } from 'react';
 
 const visionData = [
-    {
-        image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-        title: 'Core Process',
-        description: 'Analysis, Planning, Design'
-    },
-    {
-        image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80',
+   {
+        image: '../imgs/ghaziDev.jpg',
         title: 'Identity',
         description: 'Developer: Ghazi'
     },
     {
-        image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+        image: '../imgs/design.jpg',
+        title: 'Core Process',
+        description: 'Analysis, Planning, Design'
+    },
+   
+    {
+        image: '../imgs/id.jpg',
         title: 'Driving Force',
         description: 'Passion, creativity, achievement'
     }
@@ -54,7 +55,7 @@ const Vision: React.FC = () => {
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500">
-            My Vision
+             Vision
           </span>
         </h2>
         <p className="text-lg md:text-xl text-gray-400 mb-12">

@@ -19,22 +19,57 @@ const PerformanceIcon = () => (
     </svg>
 );
 
+const SupportIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M18 13v-2A6 6 0 006 11v2m12 0a2 2 0 012 2v1a3 3 0 01-3 3h-1m-8-6a2 2 0 00-2 2v1a3 3 0 003 3h1m0-6v6m8-6v6"
+    />
+  </svg>
+);
+
+
+const HostingIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M4 6h16M4 10h16M4 14h16M4 18h16M6 6v12M18 6v12M12 10a2 2 0 110-4 2 2 0 010 4zm7 8a3 3 0 11-6 0 3 3 0 016 0z"
+    />
+  </svg>
+);
+
+
 const servicesData: Service[] = [
-  {
-    icon: <WebDevIcon />,
-    title: 'Frontend Development',
-    description: 'Building modern, responsive, and scalable web applications using React, TypeScript, and the latest web technologies.',
-  },
-  {
-    icon: <UiUxIcon />,
-    title: 'UI/UX Design & Implementation',
-    description: 'Designing intuitive user interfaces and bringing them to life with clean, efficient code and pixel-perfect attention to detail.',
-  },
-  {
-    icon: <PerformanceIcon />,
-    title: 'Performance Optimization',
-    description: 'Analyzing and improving website performance to ensure fast load times and a smooth user experience, enhancing user engagement.',
-  },
+ {
+  icon: <WebDevIcon />,
+  title: 'Frontend ',
+  description: 'Building modern, responsive, and scalable web applications.',
+},
+{
+  icon: <UiUxIcon />,
+  title: 'UI/UX',
+  description: 'Designing intuitive user interfaces and bringing them to life with clean, efficient code and pixel-perfect attention to detail.',
+},
+{
+  icon: <PerformanceIcon />,
+  title: 'Performance ',
+  description: 'Analyzing and improving website performance to ensure fast load times and a smooth user experience, enhancing user engagement.',
+},
+{
+  icon: <SupportIcon />,
+  title: ' Support',
+  description: 'Providing ongoing support, updates, and communication to ensure your digital product continues to evolve, resolve issues, and stay aligned with your goals.',
+},
+{
+  icon: <HostingIcon />,
+  title: 'Hosting & Domain ',
+  description: 'Setting up and managing reliable hosting and domain services with smooth configuration, security enhancements, and continuous monitoring.',
+}
+
 ];
 
 const ServiceCard: React.FC<{ service: Service; isVisible: boolean; index: number }> = ({ service, isVisible, index }) => (
